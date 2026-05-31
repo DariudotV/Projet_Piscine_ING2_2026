@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageVista — Espace Hôte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="espace-hote.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <div class="navbar__title">Espace hôte</div>
+    <a href="#menu" class="navbar__menu" aria-label="Ouvrir le menu">☰</a>
+  </header>
+
+  <!-- ============ DRAWER NAV ============ -->
+  <nav id="menu" class="menu-drawer">
+    <a href="#" class="menu-drawer__overlay"></a>
+    <div class="menu-drawer__panel">
+      <div class="menu-drawer__header">
+        <span class="menu-drawer__title">Navigation</span>
+        <a href="#" class="menu-drawer__close">×</a>
+      </div>
+      <div class="menu-drawer__nav">
+        <span class="menu-drawer__section">Explorer</span>
+        <a href="destinations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🌍</span>Destinations</a>
+        <a href="hebergements.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏨</span>Hébergements</a>
+        <a href="transports.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🚆</span>Transports</a>
+        <a href="activites.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🎯</span>Activités</a>
+        <span class="menu-drawer__section">Mon espace</span>
+        <a href="profil.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👤</span>Mon profil</a>
+        <a href="mes-groupes.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👥</span>Mes groupes</a>
+        <a href="gestion-groupe.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🗺️</span>Gestion d'itinéraire</a>
+        <a href="mes-reservations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">📅</span>Mes réservations</a>
+        <a href="panier.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🛒</span>Panier</a>
+        <a href="notifications.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🔔</span>Notifications</a>
+        <span class="menu-drawer__section">Prestataire</span>
+        <a href="espace-hote.html" class="menu-drawer__link menu-drawer__link--active"><span class="menu-drawer__link__icon">🏠</span>Espace hôte</a>
+        <span class="menu-drawer__section">Admin</span>
+        <a href="admin.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">⚙️</span>Administration</a>
+      </div>
+      <div class="menu-drawer__footer">
+        <a href="connexion.html" class="menu-drawer__logout">Se déconnecter</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <main class="main">
+
+    <!-- SECTION ANNONCES -->
+    <section class="annonces-section">
+      <h2 class="section-title">Vos Annonces</h2>
+
+      <!-- FILTRES -->
+      <div class="filters-bar">
+        <button class="filter-btn">Type</button>
+        <button class="filter-btn">Prix</button>
+        <button class="filter-btn">Statut</button>
+        <div class="search-wrap">
+          <input class="search-input" type="text" placeholder="Rechercher" />
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- LISTE ANNONCES -->
+      <ul class="annonces-list">
+
+        <li class="annonce-item">
+          <div class="annonce-item__photo">Photo</div>
+          <div class="annonce-item__info">
+            <span class="annonce-item__name">Ibiscus Hotel</span>
+          </div>
+          <span class="annonce-item__statut annonce-item__statut--reserved">Réservé</span>
+          <span class="annonce-item__price">24 €/n</span>
+          <span class="annonce-item__desc">Description</span>
+          <button class="annonce-item__more" aria-label="Plus d'options">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/>
+            </svg>
+          </button>
+        </li>
+
+        <li class="annonce-item">
+          <div class="annonce-item__photo">Photo</div>
+          <div class="annonce-item__info">
+            <span class="annonce-item__name">Villa Florale</span>
+          </div>
+          <span class="annonce-item__statut annonce-item__statut--pending">En attente</span>
+          <span class="annonce-item__price">45 €/n</span>
+          <span class="annonce-item__desc">Description</span>
+          <button class="annonce-item__more" aria-label="Plus d'options">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/>
+            </svg>
+          </button>
+        </li>
+
+      </ul>
+
+      <!-- BOUTON NOUVELLE ANNONCE -->
+      <div class="annonces-footer">
+        <a href="nouvelle-annonce.html" class="new-annonce-btn">Nouvelle Annonce +</a>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+</html>

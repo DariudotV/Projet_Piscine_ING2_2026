@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageVista — Nouvelle annonce</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <div class="navbar__title">Nouvelle annonce</div>
+    <a href="#menu" class="navbar__menu" aria-label="Ouvrir le menu">☰</a>
+  </header>
+
+  <!-- ============ DRAWER NAV ============ -->
+  <nav id="menu" class="menu-drawer">
+    <a href="#" class="menu-drawer__overlay"></a>
+    <div class="menu-drawer__panel">
+      <div class="menu-drawer__header">
+        <span class="menu-drawer__title">Navigation</span>
+        <a href="#" class="menu-drawer__close">×</a>
+      </div>
+      <div class="menu-drawer__nav">
+        <span class="menu-drawer__section">Explorer</span>
+        <a href="destinations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🌍</span>Destinations</a>
+        <a href="hebergements.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏨</span>Hébergements</a>
+        <a href="transports.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🚆</span>Transports</a>
+        <a href="activites.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🎯</span>Activités</a>
+        <span class="menu-drawer__section">Mon espace</span>
+        <a href="profil.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👤</span>Mon profil</a>
+        <a href="mes-groupes.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👥</span>Mes groupes</a>
+        <a href="gestion-groupe.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🗺️</span>Gestion d'itinéraire</a>
+        <a href="mes-reservations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">📅</span>Mes réservations</a>
+        <a href="panier.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🛒</span>Panier</a>
+        <a href="notifications.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🔔</span>Notifications</a>
+        <span class="menu-drawer__section">Prestataire</span>
+        <a href="espace-hote.html" class="menu-drawer__link menu-drawer__link--active"><span class="menu-drawer__link__icon">🏠</span>Espace hôte</a>
+        <span class="menu-drawer__section">Admin</span>
+        <a href="admin.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">⚙️</span>Administration</a>
+      </div>
+      <div class="menu-drawer__footer">
+        <a href="connexion.html" class="menu-drawer__logout">Se déconnecter</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ MAIN ============ -->
+  <main class="auth-wide">
+    <div class="auth-card auth-card--wide">
+      <a href="espace-hote.html" class="auth-back">← Retour à mon espace hôte</a>
+      <h1 class="auth-title">Créer une nouvelle annonce</h1>
+      <p class="auth-sub">Votre annonce sera soumise à validation par un administrateur avant publication.</p>
+
+      <form action="espace-hote.html" method="get" class="auth-form">
+
+        <!-- ============ INFOS GÉNÉRALES ============ -->
+        <fieldset class="form-fieldset">
+          <legend class="form-legend">Informations générales</legend>
+
+          <div class="form-group">
+            <label class="form-label" for="nom">Nom de l'annonce</label>
+            <input type="text" id="nom" class="form-input" placeholder="Ex : Villa Florale avec vue mer" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="type">Type d'hébergement</label>
+            <select id="type" class="form-input" required>
+              <option value="">— Sélectionner —</option>
+              <option>Hôtel</option>
+              <option>Appartement</option>
+              <option>Villa / Maison</option>
+              <option>Auberge de jeunesse</option>
+              <option>Lodge / Bungalow</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="desc">Description</label>
+            <textarea id="desc" class="form-input" rows="5" placeholder="Décrivez votre hébergement, son ambiance, son emplacement..."></textarea>
+          </div>
+        </fieldset>
+
+        <!-- ============ LOCALISATION ============ -->
+        <fieldset class="form-fieldset">
+          <legend class="form-legend">Localisation</legend>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="destination">Destination</label>
+              <select id="destination" class="form-input" required>
+                <option value="">— Choisir —</option>
+                <option>Tokyo, Japon</option>
+                <option>Lisbonne, Portugal</option>
+                <option>Rio de Janeiro, Brésil</option>
+                <option>Bali, Indonésie</option>
+                <option>Reykjavik, Islande</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ville">Ville / quartier précis</label>
+              <input type="text" id="ville" class="form-input" placeholder="Shibuya" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="adresse">Adresse complète</label>
+            <input type="text" id="adresse" class="form-input" placeholder="12 rue de l'Étoile" />
+          </div>
+        </fieldset>
+
+        <!-- ============ CAPACITÉ & PRIX ============ -->
+        <fieldset class="form-fieldset">
+          <legend class="form-legend">Capacité & tarifs</legend>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="capacite">Capacité (voyageurs)</label>
+              <input type="number" id="capacite" class="form-input" min="1" value="4" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="chambres">Nombre de chambres</label>
+              <input type="number" id="chambres" class="form-input" min="0" value="2" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="prix">Prix par nuit (€)</label>
+              <input type="number" id="prix" class="form-input" min="0" value="120" />
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- ============ ÉQUIPEMENTS ============ -->
+        <fieldset class="form-fieldset">
+          <legend class="form-legend">Équipements proposés</legend>
+
+          <div class="checkbox-grid">
+            <label class="checkbox-tile"><input type="checkbox" /> <span>📶 Wi-Fi</span></label>
+            <label class="checkbox-tile"><input type="checkbox" /> <span>🍳 Cuisine équipée</span></label>
+            <label class="checkbox-tile"><input type="checkbox" /> <span>🅿️ Parking</span></label>
+            <label class="checkbox-tile"><input type="checkbox" /> <span>🏊 Piscine</span></label>
+            <label class="checkbox-tile"><input type="checkbox" /> <span>❄️ Climatisation</span></label>
+            <label class="checkbox-tile"><input type="checkbox" /> <span>🧺 Lave-linge</span></label>
+            <label class="checkbox-tile"><input type="checkbox" /> <span>🐾 Animaux acceptés</span></label>
+            <label class="checkbox-tile"><input type="checkbox" /> <span>🚭 Non-fumeur</span></label>
+          </div>
+        </fieldset>
+
+        <!-- ============ PHOTO ============ -->
+        <fieldset class="form-fieldset">
+          <legend class="form-legend">Photo principale</legend>
+          <div class="form-group">
+            <label class="form-label" for="photo">Image de couverture</label>
+            <input type="file" id="photo" class="form-input" accept="image/*" />
+            <small class="form-hint">Format JPG ou PNG, 2 Mo max.</small>
+          </div>
+        </fieldset>
+
+        <!-- ============ INFO VALIDATION ============ -->
+        <div class="alert alert--info">
+          <strong>ℹ️ Validation administrateur :</strong> Votre annonce sera vérifiée par notre équipe avant d'apparaître publiquement dans le catalogue. Vous recevrez une notification dès la validation.
+        </div>
+
+        <!-- ============ ACTIONS ============ -->
+        <div class="form-actions">
+          <a href="espace-hote.html" class="btn btn--ghost">Annuler</a>
+          <button type="submit" class="btn btn--primary">Soumettre pour validation</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>

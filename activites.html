@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageVista — Activités</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="catalogue.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <div class="navbar__title">Activités</div>
+    <a href="#menu" class="navbar__menu" aria-label="Ouvrir le menu">☰</a>
+  </header>
+
+  <!-- ============ DRAWER NAV ============ -->
+  <nav id="menu" class="menu-drawer" aria-label="Menu principal">
+    <a href="#" class="menu-drawer__overlay" aria-label="Fermer"></a>
+    <div class="menu-drawer__panel">
+      <div class="menu-drawer__header">
+        <span class="menu-drawer__title">Navigation</span>
+        <a href="#" class="menu-drawer__close" aria-label="Fermer">×</a>
+      </div>
+      <div class="menu-drawer__nav">
+        <span class="menu-drawer__section">Explorer</span>
+        <a href="destinations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🌍</span>Destinations</a>
+        <a href="hebergements.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏨</span>Hébergements</a>
+        <a href="transports.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🚆</span>Transports</a>
+        <a href="activites.html" class="menu-drawer__link menu-drawer__link--active"><span class="menu-drawer__link__icon">🎯</span>Activités</a>
+        <span class="menu-drawer__section">Mon espace</span>
+        <a href="profil.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👤</span>Mon profil</a>
+        <a href="mes-groupes.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👥</span>Mes groupes</a>
+        <a href="gestion-groupe.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🗺️</span>Gestion d'itinéraire</a>
+        <a href="mes-reservations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">📅</span>Mes réservations</a>
+        <a href="panier.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🛒</span>Panier</a>
+        <a href="notifications.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🔔</span>Notifications</a>
+        <span class="menu-drawer__section">Prestataire</span>
+        <a href="espace-hote.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏠</span>Espace hôte</a>
+        <span class="menu-drawer__section">Admin</span>
+        <a href="admin.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">⚙️</span>Administration</a>
+      </div>
+      <div class="menu-drawer__footer">
+        <a href="connexion.html" class="menu-drawer__logout">Se déconnecter</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <h1 class="page__title">Activités</h1>
+    <p class="page__subtitle">Inscrivez votre groupe à des expériences locales inoubliables.</p>
+
+    <!-- Filtres simples -->
+    <form class="search-form card-block">
+      <div class="search-form__filters" style="margin-top:0;">
+        <input class="form-input" type="search" placeholder="🔍 Rechercher une activité" style="max-width: 280px;" />
+        <select class="form-select" style="max-width: 180px;">
+          <option>Toutes catégories</option>
+          <option>Culture</option>
+          <option>Sport / Aventure</option>
+          <option>Gastronomie</option>
+          <option>Nature</option>
+        </select>
+        <select class="form-select" style="max-width: 180px;">
+          <option>Toutes durées</option>
+          <option>< 2 h</option>
+          <option>2 - 4 h</option>
+          <option>Journée complète</option>
+        </select>
+        <button type="submit" class="btn btn--primary">Filtrer</button>
+      </div>
+    </form>
+
+    <!-- ============ LISTE D'ACTIVITÉS ============ -->
+    <section class="catalog-grid">
+
+      <!-- Activité 1 -->
+      <article class="cat-card">
+        <div class="cat-card__img">
+          <span class="cat-card__badge badge badge--info">Culture</span>
+        </div>
+        <div class="cat-card__body">
+          <span class="cat-card__name">Visite guidée — Temple Senso-ji</span>
+          <span class="cat-card__meta">Durée 2 h · Capacité max 12 · Tokyo</span>
+          <p class="cat-card__desc">Découvrez le plus vieux temple de Tokyo avec un guide francophone.</p>
+
+          <!-- Indicateur de capacité -->
+          <div class="capacity">
+            <div class="capacity__bar"><span style="width: 40%;"></span></div>
+            <span class="capacity__label">5 / 12 places réservées</span>
+          </div>
+
+          <div class="cat-card__footer">
+            <span class="cat-card__price">18 € / pers.</span>
+            <button class="btn btn--accent">Inscrire le groupe</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Activité 2 -->
+      <article class="cat-card">
+        <div class="cat-card__img">
+          <span class="cat-card__badge badge badge--warning">Aventure</span>
+        </div>
+        <div class="cat-card__body">
+          <span class="cat-card__name">Kayak en rivière</span>
+          <span class="cat-card__meta">Durée 3 h · Capacité max 8 · Mont Fuji</span>
+          <p class="cat-card__desc">Descente en kayak avec moniteur diplômé. Matériel inclus.</p>
+
+          <div class="capacity">
+            <div class="capacity__bar"><span style="width: 75%;"></span></div>
+            <span class="capacity__label">6 / 8 places réservées</span>
+          </div>
+
+          <div class="cat-card__footer">
+            <span class="cat-card__price">45 € / pers.</span>
+            <button class="btn btn--accent">Inscrire le groupe</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Activité 3 — complète -->
+      <article class="cat-card">
+        <div class="cat-card__img">
+          <span class="cat-card__badge badge badge--danger">Complète</span>
+        </div>
+        <div class="cat-card__body">
+          <span class="cat-card__name">Atelier sushi en famille</span>
+          <span class="cat-card__meta">Durée 1h30 · Capacité max 10 · Ginza</span>
+          <p class="cat-card__desc">Apprenez à confectionner vos propres sushis avec un chef.</p>
+
+          <div class="capacity">
+            <div class="capacity__bar capacity__bar--full"><span style="width: 100%;"></span></div>
+            <span class="capacity__label">10 / 10 — complet</span>
+          </div>
+
+          <div class="cat-card__footer">
+            <span class="cat-card__price">62 € / pers.</span>
+            <button class="btn btn--ghost" disabled>Indisponible</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Activité 4 -->
+      <article class="cat-card">
+        <div class="cat-card__img">
+          <span class="cat-card__badge badge badge--info">Nature</span>
+        </div>
+        <div class="cat-card__body">
+          <span class="cat-card__name">Forêt de bambous d'Arashiyama</span>
+          <span class="cat-card__meta">Durée 4 h · Capacité max 20 · Kyoto</span>
+          <p class="cat-card__desc">Excursion à la journée, transport et déjeuner inclus.</p>
+
+          <div class="capacity">
+            <div class="capacity__bar"><span style="width: 25%;"></span></div>
+            <span class="capacity__label">5 / 20 places réservées</span>
+          </div>
+
+          <div class="cat-card__footer">
+            <span class="cat-card__price">75 € / pers.</span>
+            <button class="btn btn--accent">Inscrire le groupe</button>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="alert alert--info" style="margin-top:24px;">
+      <strong>🎯 Gestion des capacités</strong>
+      Lorsque la capacité maximale d'une activité est atteinte, l'inscription est automatiquement bloquée pour préserver la qualité de l'expérience.
+    </section>
+
+  </main>
+
+</body>
+</html>

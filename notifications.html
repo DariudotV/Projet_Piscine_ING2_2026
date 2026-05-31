@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageVista — Notifications</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="notifications.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <div class="navbar__title">Notifications</div>
+    <a href="#menu" class="navbar__menu" aria-label="Ouvrir le menu">☰</a>
+  </header>
+
+  <!-- ============ DRAWER NAV ============ -->
+  <nav id="menu" class="menu-drawer" aria-label="Menu principal">
+    <a href="#" class="menu-drawer__overlay"></a>
+    <div class="menu-drawer__panel">
+      <div class="menu-drawer__header">
+        <span class="menu-drawer__title">Navigation</span>
+        <a href="#" class="menu-drawer__close">×</a>
+      </div>
+      <div class="menu-drawer__nav">
+        <span class="menu-drawer__section">Explorer</span>
+        <a href="destinations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🌍</span>Destinations</a>
+        <a href="hebergements.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏨</span>Hébergements</a>
+        <a href="transports.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🚆</span>Transports</a>
+        <a href="activites.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🎯</span>Activités</a>
+        <span class="menu-drawer__section">Mon espace</span>
+        <a href="profil.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👤</span>Mon profil</a>
+        <a href="mes-groupes.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👥</span>Mes groupes</a>
+        <a href="gestion-groupe.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🗺️</span>Gestion d'itinéraire</a>
+        <a href="mes-reservations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">📅</span>Mes réservations</a>
+        <a href="panier.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🛒</span>Panier</a>
+        <a href="notifications.html" class="menu-drawer__link menu-drawer__link--active"><span class="menu-drawer__link__icon">🔔</span>Notifications</a>
+        <span class="menu-drawer__section">Prestataire</span>
+        <a href="espace-hote.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏠</span>Espace hôte</a>
+        <span class="menu-drawer__section">Admin</span>
+        <a href="admin.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">⚙️</span>Administration</a>
+      </div>
+      <div class="menu-drawer__footer">
+        <a href="connexion.html" class="menu-drawer__logout">Se déconnecter</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="notif-head">
+      <div>
+        <h1 class="page__title" style="margin-bottom: 4px;">Notifications</h1>
+        <p class="page__subtitle" style="margin-bottom: 0;">3 non lues sur 8</p>
+      </div>
+      <div class="notif-head__actions">
+        <button class="btn btn--ghost">Tout marquer comme lu</button>
+        <select class="form-select" style="max-width: 200px;">
+          <option>Toutes</option>
+          <option>Non lues</option>
+          <option>Réservations</option>
+          <option>Recommandations</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- ============ LISTE NOTIFICATIONS ============ -->
+    <section class="notif-list">
+
+      <!-- Notif non lue : réservation -->
+      <article class="notif notif--unread">
+        <div class="notif__dot"></div>
+        <div class="notif__icon notif__icon--success">✓</div>
+        <div class="notif__body">
+          <span class="notif__title">Réservation confirmée — Japon 2027</span>
+          <p class="notif__text">Votre réservation VV-2026-Q9TX42 a bien été enregistrée pour 4 voyageurs.</p>
+          <span class="notif__date">Il y a 2 minutes</span>
+        </div>
+        <button class="icon-btn" title="Marquer comme lue">✓</button>
+      </article>
+
+      <!-- Notif non lue : recommandation -->
+      <article class="notif notif--unread">
+        <div class="notif__dot"></div>
+        <div class="notif__icon notif__icon--info">💡</div>
+        <div class="notif__body">
+          <span class="notif__title">Nouvelle recommandation de Marc</span>
+          <p class="notif__text">Marc a épinglé « Atelier sushi à Ginza » dans le groupe Japon 2027.</p>
+          <span class="notif__date">Il y a 1 heure</span>
+        </div>
+        <button class="icon-btn" title="Marquer comme lue">✓</button>
+      </article>
+
+      <!-- Notif non lue : modification -->
+      <article class="notif notif--unread">
+        <div class="notif__dot"></div>
+        <div class="notif__icon notif__icon--warning">⚠️</div>
+        <div class="notif__body">
+          <span class="notif__title">Modification d'itinéraire</span>
+          <p class="notif__text">Léa a modifié le transport retour. Coût par personne mis à jour : 1 500 €.</p>
+          <span class="notif__date">Hier</span>
+        </div>
+        <button class="icon-btn" title="Marquer comme lue">✓</button>
+      </article>
+
+      <!-- Notif lue -->
+      <article class="notif">
+        <div class="notif__icon notif__icon--info">🔗</div>
+        <div class="notif__body">
+          <span class="notif__title">Invitation acceptée</span>
+          <p class="notif__text">Tom a rejoint le groupe Brésil 2028.</p>
+          <span class="notif__date">Il y a 3 jours</span>
+        </div>
+        <button class="icon-btn icon-btn--danger" title="Supprimer">🗑️</button>
+      </article>
+
+      <article class="notif">
+        <div class="notif__icon notif__icon--success">🏨</div>
+        <div class="notif__body">
+          <span class="notif__title">Annonce validée par l'admin</span>
+          <p class="notif__text">Votre annonce « Studio Modern Shinjuku » est désormais en ligne.</p>
+          <span class="notif__date">Il y a 5 jours</span>
+        </div>
+        <button class="icon-btn icon-btn--danger" title="Supprimer">🗑️</button>
+      </article>
+
+    </section>
+  </main>
+
+</body>
+</html>

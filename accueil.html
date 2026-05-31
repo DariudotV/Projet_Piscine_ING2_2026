@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageVista — Accueil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="accueil.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <nav class="navbar__links">
+      <a href="destinations.html">Destinations</a>
+      <a href="hebergements.html">Hébergements</a>
+      <a href="transports.html">Transports</a>
+      <a href="activites.html">Activités</a>
+    </nav>
+    <div class="navbar__cta">
+      <a href="connexion.html" class="btn btn--ghost">Se connecter</a>
+      <a href="inscription.html" class="btn btn--primary">S'inscrire</a>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__content">
+      <span class="hero__tag">Voyagez ensemble, voyagez mieux</span>
+      <h1 class="hero__title">Planifiez vos voyages de groupe<br/>en toute simplicité.</h1>
+      <p class="hero__subtitle">
+        Choisissez une destination, invitez vos amis, composez votre itinéraire :
+        transports, hébergements et activités au même endroit.
+      </p>
+
+      <!-- Mini formulaire de recherche rapide -->
+      <form class="hero__search" action="destinations.html">
+        <div class="hero__search-field">
+          <label class="form-label">Destination</label>
+          <input class="form-input" type="text" placeholder="Tokyo, Lisbonne, Bali…" />
+        </div>
+        <div class="hero__search-field">
+          <label class="form-label">Départ</label>
+          <input class="form-input" type="date" />
+        </div>
+        <div class="hero__search-field">
+          <label class="form-label">Retour</label>
+          <input class="form-input" type="date" />
+        </div>
+        <button type="submit" class="btn btn--accent">Rechercher</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ DESTINATIONS VITRINE ============ -->
+  <section class="section">
+    <div class="section__head">
+      <h2 class="section__title">Destinations populaires</h2>
+      <a href="destinations.html" class="section__link">Voir tout →</a>
+    </div>
+    <div class="destinations-row">
+      <a href="detail-destination.html" class="dest-card">
+        <div class="dest-card__img"></div>
+        <div class="dest-card__body">
+          <span class="dest-card__name">Tokyo</span>
+          <span class="dest-card__type">Asie</span>
+        </div>
+      </a>
+      <a href="detail-destination.html" class="dest-card">
+        <div class="dest-card__img"></div>
+        <div class="dest-card__body">
+          <span class="dest-card__name">Lisbonne</span>
+          <span class="dest-card__type">Europe</span>
+        </div>
+      </a>
+      <a href="detail-destination.html" class="dest-card">
+        <div class="dest-card__img"></div>
+        <div class="dest-card__body">
+          <span class="dest-card__name">Marrakech</span>
+          <span class="dest-card__type">Afrique</span>
+        </div>
+      </a>
+      <a href="detail-destination.html" class="dest-card">
+        <div class="dest-card__img"></div>
+        <div class="dest-card__body">
+          <span class="dest-card__name">Rio</span>
+          <span class="dest-card__type">Amérique du Sud</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ POURQUOI VV ============ -->
+  <section class="section features">
+    <h2 class="section__title">Pourquoi VoyageVista ?</h2>
+    <div class="features__grid">
+      <article class="feature">
+        <div class="feature__icon">👥</div>
+        <h3>Voyage en groupe</h3>
+        <p>Créez un groupe, invitez vos amis et co-construisez votre séjour idéal.</p>
+      </article>
+      <article class="feature">
+        <div class="feature__icon">🗺️</div>
+        <h3>Itinéraire complet</h3>
+        <p>Transports, hébergements et activités réunis dans un seul itinéraire cohérent.</p>
+      </article>
+      <article class="feature">
+        <div class="feature__icon">💳</div>
+        <h3>Paiement simulé</h3>
+        <p>Le chef de groupe valide et règle l'ensemble en une seule réservation.</p>
+      </article>
+      <article class="feature">
+        <div class="feature__icon">🔔</div>
+        <h3>Notifications</h3>
+        <p>Soyez informé en temps réel des recommandations et réservations.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <span>© 2026 VoyageVista — Projet ING2 ECE Paris</span>
+    <div class="footer__links">
+      <a href="connexion.html">Connexion</a>
+      <a href="inscription.html">Inscription</a>
+      <a href="admin.html">Espace Admin</a>
+    </div>
+  </footer>
+
+</body>
+</html>

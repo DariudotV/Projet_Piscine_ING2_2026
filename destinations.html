@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>VoyageVista — Destinations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="destinations.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <div class="navbar__title">Destinations</div>
+    <a href="#menu" class="navbar__menu" aria-label="Ouvrir le menu">☰</a>
+  </header>
+
+  <!-- ============ DRAWER NAV ============ -->
+  <nav id="menu" class="menu-drawer">
+    <a href="#" class="menu-drawer__overlay"></a>
+    <div class="menu-drawer__panel">
+      <div class="menu-drawer__header">
+        <span class="menu-drawer__title">Navigation</span>
+        <a href="#" class="menu-drawer__close">×</a>
+      </div>
+      <div class="menu-drawer__nav">
+        <span class="menu-drawer__section">Explorer</span>
+        <a href="destinations.html" class="menu-drawer__link menu-drawer__link--active"><span class="menu-drawer__link__icon">🌍</span>Destinations</a>
+        <a href="hebergements.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏨</span>Hébergements</a>
+        <a href="transports.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🚆</span>Transports</a>
+        <a href="activites.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🎯</span>Activités</a>
+        <span class="menu-drawer__section">Mon espace</span>
+        <a href="profil.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👤</span>Mon profil</a>
+        <a href="mes-groupes.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👥</span>Mes groupes</a>
+        <a href="gestion-groupe.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🗺️</span>Gestion d'itinéraire</a>
+        <a href="mes-reservations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">📅</span>Mes réservations</a>
+        <a href="panier.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🛒</span>Panier</a>
+        <a href="notifications.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🔔</span>Notifications</a>
+        <span class="menu-drawer__section">Prestataire</span>
+        <a href="espace-hote.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏠</span>Espace hôte</a>
+        <span class="menu-drawer__section">Admin</span>
+        <a href="admin.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">⚙️</span>Administration</a>
+      </div>
+      <div class="menu-drawer__footer">
+        <a href="connexion.html" class="menu-drawer__logout">Se déconnecter</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <main class="main">
+    <section class="destinations-section">
+      <h2 class="section-title">Destinations populaires</h2>
+      <div class="destinations-grid">
+        <!-- Lien vers la page de détail -->
+        <a href="detail-destination.html" class="destination-card">
+          <div class="destination-card__img"></div>
+          <div class="destination-card__body">
+            <span class="destination-card__name">Destination 1</span>
+            <span class="destination-card__type">Continent 1</span>
+          </div>
+        </a>
+        <a href="detail-destination.html" class="destination-card">
+          <div class="destination-card__img"></div>
+          <div class="destination-card__body">
+            <span class="destination-card__name">Destination 2</span>
+            <span class="destination-card__type">Continent 2</span>
+          </div>
+        </a>
+        <a href="detail-destination.html" class="destination-card">
+          <div class="destination-card__img"></div>
+          <div class="destination-card__body">
+            <span class="destination-card__name">Destination 3</span>
+            <span class="destination-card__type">Continent 3</span>
+          </div>
+        </a>
+        <a href="detail-destination.html" class="destination-card">
+          <div class="destination-card__img"></div>
+          <div class="destination-card__body">
+            <span class="destination-card__name">Destination 4</span>
+            <span class="destination-card__type">Continent 4</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

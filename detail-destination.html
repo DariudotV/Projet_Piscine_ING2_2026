@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>VoyageVista — Détails</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    :root {
+      --primary: #3B82F6; --bg: #F1F5F9; --card: #FFFFFF;
+      --text: #1E293B; --border: #E2E8F0; --radius: 12px;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding-bottom: 50px; }
+    
+    .navbar {
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--card); padding: 0 24px; height: 64px; border-bottom: 1px solid var(--border);
+    }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+    h2 { font-size: 1.25rem; margin-bottom: 15px; margin-top: 30px; }
+
+    /* --- SECTION LOGEMENTS (DÉFILEMENT HORIZONTAL) --- */
+    .scroll-container {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 10px;
+    }
+    .scroll-container::-webkit-scrollbar { height: 6px; }
+    .scroll-container::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+
+    .card-h {
+      flex: 0 0 280px; /* Largeur fixe pour forcer le scroll */
+      scroll-snap-align: start;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 15px;
+    }
+
+    /* --- SECTIONS VERTICALES --- */
+    .vertical-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 15px;
+    }
+    .card-v {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 15px;
+    }
+
+    .img-placeholder { width: 100%; height: 120px; background: var(--border); border-radius: 8px; margin-bottom: 10px; }
+    .name { font-weight: 600; display: block; }
+    .price { font-size: 0.9rem; color: var(--primary); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <div class="navbar__title">Détail destination</div>
+    <a href="#menu" class="navbar__menu" aria-label="Ouvrir le menu">☰</a>
+  </header>
+
+  <!-- ============ DRAWER NAV ============ -->
+  <nav id="menu" class="menu-drawer">
+    <a href="#" class="menu-drawer__overlay"></a>
+    <div class="menu-drawer__panel">
+      <div class="menu-drawer__header">
+        <span class="menu-drawer__title">Navigation</span>
+        <a href="#" class="menu-drawer__close">×</a>
+      </div>
+      <div class="menu-drawer__nav">
+        <span class="menu-drawer__section">Explorer</span>
+        <a href="destinations.html" class="menu-drawer__link menu-drawer__link--active"><span class="menu-drawer__link__icon">🌍</span>Destinations</a>
+        <a href="hebergements.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏨</span>Hébergements</a>
+        <a href="transports.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🚆</span>Transports</a>
+        <a href="activites.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🎯</span>Activités</a>
+        <span class="menu-drawer__section">Mon espace</span>
+        <a href="profil.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👤</span>Mon profil</a>
+        <a href="mes-groupes.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👥</span>Mes groupes</a>
+        <a href="gestion-groupe.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🗺️</span>Gestion d'itinéraire</a>
+        <a href="mes-reservations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">📅</span>Mes réservations</a>
+        <a href="panier.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🛒</span>Panier</a>
+        <a href="notifications.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🔔</span>Notifications</a>
+        <span class="menu-drawer__section">Prestataire</span>
+        <a href="espace-hote.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏠</span>Espace hôte</a>
+        <span class="menu-drawer__section">Admin</span>
+        <a href="admin.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">⚙️</span>Administration</a>
+      </div>
+      <div class="menu-drawer__footer">
+        <a href="connexion.html" class="menu-drawer__logout">Se déconnecter</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    
+    <!-- LOGEMENTS -->
+    <h2>Hébergements</h2>
+    <div class="scroll-container">
+      <div class="card-h">
+        <div class="img-placeholder"></div>
+        <span class="name">auberge1</span>
+        <span class="price">prix1</span>
+      </div>
+      <div class="card-h">
+        <div class="img-placeholder"></div>
+        <span class="name">auberge2</span>
+        <span class="price">prix2</span>
+      </div>
+      <div class="card-h">
+        <div class="img-placeholder"></div>
+        <span class="name">auberge3</span>
+        <span class="price">prix3</span>
+      </div>
+      <div class="card-h">
+        <div class="img-placeholder"></div>
+        <span class="name">auberge4</span>
+        <span class="price">prix4</span>
+      </div>
+    </div>
+
+    <!-- ACTIVITÉS -->
+    <h2>Activités</h2>
+    <div class="vertical-grid">
+      <div class="card-v">
+        <div class="img-placeholder"></div>
+        <span class="name">activité1</span>
+        <span class="price">prix1</span>
+      </div>
+      <div class="card-v">
+        <div class="img-placeholder"></div>
+        <span class="name">activité2</span>
+        <span class="price">prix2</span>
+      </div>
+    </div>
+
+    <!-- MONUMENTS -->
+    <h2>Monuments</h2>
+    <div class="vertical-grid">
+      <div class="card-v">
+        <div class="img-placeholder"></div>
+        <span class="name">monument1</span>
+        <span class="price">Gratuit</span>
+      </div>
+      <div class="card-v">
+        <div class="img-placeholder"></div>
+        <span class="name">monument2</span>
+        <span class="price">Gratuit</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

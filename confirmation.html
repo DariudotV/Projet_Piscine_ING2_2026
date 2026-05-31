@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageVista — Confirmation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="confirmation.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <div class="navbar__title">Réservation confirmée</div>
+    <a href="#menu" class="navbar__menu" aria-label="Ouvrir le menu">☰</a>
+  </header>
+
+  <!-- ============ DRAWER NAV ============ -->
+  <nav id="menu" class="menu-drawer" aria-label="Menu principal">
+    <a href="#" class="menu-drawer__overlay"></a>
+    <div class="menu-drawer__panel">
+      <div class="menu-drawer__header">
+        <span class="menu-drawer__title">Navigation</span>
+        <a href="#" class="menu-drawer__close">×</a>
+      </div>
+      <div class="menu-drawer__nav">
+        <span class="menu-drawer__section">Mon espace</span>
+        <a href="profil.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👤</span>Mon profil</a>
+        <a href="mes-reservations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">📅</span>Mes réservations</a>
+        <a href="notifications.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🔔</span>Notifications</a>
+        <a href="accueil.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏠</span>Accueil</a>
+      </div>
+      <div class="menu-drawer__footer">
+        <a href="connexion.html" class="menu-drawer__logout">Se déconnecter</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="confirmation">
+
+    <!-- ============ NOTIFICATION TOAST (déclenchement) ============ -->
+    <div class="toast">
+      <div class="toast__icon">🔔</div>
+      <div>
+        <strong>Notification envoyée</strong>
+        <span>Tous les membres du groupe Japon 2027 ont été notifiés.</span>
+      </div>
+    </div>
+
+    <!-- ============ SUCCESS CARD ============ -->
+    <section class="success-card">
+      <div class="success-card__icon">✓</div>
+      <h1 class="success-card__title">Votre voyage est réservé !</h1>
+      <p class="success-card__subtitle">
+        Référence de réservation : <strong>VV-2026-Q9TX42</strong>
+      </p>
+
+      <div class="success-card__meta">
+        <div>
+          <span class="success-card__label">Destination</span>
+          <span class="success-card__value">Tokyo, Japon</span>
+        </div>
+        <div>
+          <span class="success-card__label">Dates</span>
+          <span class="success-card__value">15 → 23 juillet 2026</span>
+        </div>
+        <div>
+          <span class="success-card__label">Voyageurs</span>
+          <span class="success-card__value">4 personnes</span>
+        </div>
+        <div>
+          <span class="success-card__label">Total payé</span>
+          <span class="success-card__value">6 000 €</span>
+        </div>
+      </div>
+
+      <div class="success-card__actions">
+        <a href="mes-reservations.html" class="btn btn--primary">Voir mes réservations</a>
+        <a href="notifications.html" class="btn btn--ghost">Consulter les notifications</a>
+      </div>
+
+      <p class="success-card__note">
+        ℹ️ Conformément à nos règles, votre réservation est désormais <strong>immuable</strong>.
+        Pour toute modification, contactez le support.
+      </p>
+    </section>
+
+  </main>
+
+</body>
+</html>

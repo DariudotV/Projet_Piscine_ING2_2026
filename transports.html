@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageVista — Transports</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="catalogue.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <div class="navbar__title">Transports</div>
+    <a href="#menu" class="navbar__menu" aria-label="Ouvrir le menu">☰</a>
+  </header>
+
+  <!-- ============ DRAWER NAV ============ -->
+  <nav id="menu" class="menu-drawer" aria-label="Menu principal">
+    <a href="#" class="menu-drawer__overlay" aria-label="Fermer"></a>
+    <div class="menu-drawer__panel">
+      <div class="menu-drawer__header">
+        <span class="menu-drawer__title">Navigation</span>
+        <a href="#" class="menu-drawer__close" aria-label="Fermer">×</a>
+      </div>
+      <div class="menu-drawer__nav">
+        <span class="menu-drawer__section">Explorer</span>
+        <a href="destinations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🌍</span>Destinations</a>
+        <a href="hebergements.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏨</span>Hébergements</a>
+        <a href="transports.html" class="menu-drawer__link menu-drawer__link--active"><span class="menu-drawer__link__icon">🚆</span>Transports</a>
+        <a href="activites.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🎯</span>Activités</a>
+        <span class="menu-drawer__section">Mon espace</span>
+        <a href="profil.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👤</span>Mon profil</a>
+        <a href="mes-groupes.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👥</span>Mes groupes</a>
+        <a href="gestion-groupe.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🗺️</span>Gestion d'itinéraire</a>
+        <a href="mes-reservations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">📅</span>Mes réservations</a>
+        <a href="panier.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🛒</span>Panier</a>
+        <a href="notifications.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🔔</span>Notifications</a>
+        <span class="menu-drawer__section">Prestataire</span>
+        <a href="espace-hote.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏠</span>Espace hôte</a>
+        <span class="menu-drawer__section">Admin</span>
+        <a href="admin.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">⚙️</span>Administration</a>
+      </div>
+      <div class="menu-drawer__footer">
+        <a href="connexion.html" class="menu-drawer__logout">Se déconnecter</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <h1 class="page__title">Rechercher un transport</h1>
+    <p class="page__subtitle">Choisissez votre trajet et ajoutez-le à votre itinéraire.</p>
+
+    <!-- ============ FORMULAIRE DE RECHERCHE ============ -->
+    <form class="search-form card-block">
+      <div class="search-form__row">
+        <div class="form-group">
+          <label class="form-label">Ville de départ</label>
+          <input class="form-input" type="text" placeholder="Paris" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Ville d'arrivée</label>
+          <input class="form-input" type="text" placeholder="Tokyo" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Date aller</label>
+          <input class="form-input" type="date" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Date retour</label>
+          <input class="form-input" type="date" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Voyageurs</label>
+          <input class="form-input" type="number" min="1" value="4" />
+        </div>
+      </div>
+
+      <div class="search-form__filters">
+        <label class="chip"><input type="checkbox" checked /> ✈️ Avion</label>
+        <label class="chip"><input type="checkbox" /> 🚆 Train</label>
+        <label class="chip"><input type="checkbox" /> 🚌 Bus</label>
+        <label class="chip"><input type="checkbox" /> 🚗 Voiture</label>
+        <select class="form-select" style="max-width: 180px;">
+          <option>Trier par prix</option>
+          <option>Trier par durée</option>
+          <option>Trier par horaire</option>
+        </select>
+        <button type="submit" class="btn btn--primary">Rechercher</button>
+      </div>
+    </form>
+
+    <!-- ============ RÉSULTATS DE TRAJETS ============ -->
+    <section class="results">
+      <div class="results__head">
+        <h2 class="section__title">Trajets disponibles</h2>
+        <span class="results__count">3 résultats — dates vérifiées ✅</span>
+      </div>
+
+      <!-- Carte trajet 1 -->
+      <article class="trip">
+        <div class="trip__type">✈️<span>Avion</span></div>
+        <div class="trip__leg">
+          <span class="trip__city">Paris CDG</span>
+          <span class="trip__time">10:30</span>
+          <span class="trip__date">15/07/2026</span>
+        </div>
+        <div class="trip__arrow">→<small>12h45 · direct</small></div>
+        <div class="trip__leg">
+          <span class="trip__city">Tokyo NRT</span>
+          <span class="trip__time">17:15</span>
+          <span class="trip__date">16/07/2026</span>
+        </div>
+        <div class="trip__meta">
+          <span class="trip__company">Air France</span>
+          <span class="badge badge--success">12 places dispo</span>
+        </div>
+        <div class="trip__price">
+          <span class="trip__amount">680 €</span>
+          <span class="trip__unit">/ personne</span>
+          <button class="btn btn--accent">Sélectionner</button>
+        </div>
+      </article>
+
+      <!-- Carte trajet 2 -->
+      <article class="trip">
+        <div class="trip__type">✈️<span>Avion</span></div>
+        <div class="trip__leg">
+          <span class="trip__city">Paris ORY</span>
+          <span class="trip__time">14:00</span>
+          <span class="trip__date">15/07/2026</span>
+        </div>
+        <div class="trip__arrow">→<small>15h20 · 1 escale</small></div>
+        <div class="trip__leg">
+          <span class="trip__city">Tokyo HND</span>
+          <span class="trip__time">19:20</span>
+          <span class="trip__date">16/07/2026</span>
+        </div>
+        <div class="trip__meta">
+          <span class="trip__company">ANA</span>
+          <span class="badge badge--warning">3 places dispo</span>
+        </div>
+        <div class="trip__price">
+          <span class="trip__amount">540 €</span>
+          <span class="trip__unit">/ personne</span>
+          <button class="btn btn--accent">Sélectionner</button>
+        </div>
+      </article>
+
+      <!-- Carte trajet 3 -->
+      <article class="trip trip--unavailable">
+        <div class="trip__type">🚆<span>Train</span></div>
+        <div class="trip__leg">
+          <span class="trip__city">Paris Lyon</span>
+          <span class="trip__time">07:45</span>
+          <span class="trip__date">15/07/2026</span>
+        </div>
+        <div class="trip__arrow">→<small>complet</small></div>
+        <div class="trip__leg">
+          <span class="trip__city">Marseille</span>
+          <span class="trip__time">11:00</span>
+          <span class="trip__date">15/07/2026</span>
+        </div>
+        <div class="trip__meta">
+          <span class="trip__company">SNCF</span>
+          <span class="badge badge--danger">Complet</span>
+        </div>
+        <div class="trip__price">
+          <span class="trip__amount">95 €</span>
+          <span class="trip__unit">/ personne</span>
+          <button class="btn btn--ghost" disabled>Indisponible</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ ALERTE COHÉRENCE DATES ============ -->
+    <section class="alert alert--info">
+      <strong>ℹ️ Cohérence des dates</strong>
+      Le transport doit encadrer les dates d'hébergement de votre itinéraire.
+      Les trajets aux dates incompatibles sont automatiquement filtrés.
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageVista — Connexion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body class="auth-body">
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <div class="navbar__title">Connexion</div>
+    <a href="accueil.html" class="navbar__menu" aria-label="Retour à l'accueil">×</a>
+  </header>
+
+  <!-- ============ ZONE AUTH ============ -->
+  <main class="auth">
+    <div class="auth-card">
+      <h1 class="auth-card__title">Bon retour parmi nous 👋</h1>
+      <p class="auth-card__subtitle">Connectez-vous pour rejoindre vos groupes de voyage.</p>
+
+      <!-- Formulaire de connexion -->
+      <form class="auth-form" action="profil.html">
+        <div class="form-group">
+          <label class="form-label" for="email">Adresse email</label>
+          <input class="form-input" type="email" id="email" placeholder="prenom.nom@email.com" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="pwd">Mot de passe</label>
+          <input class="form-input" type="password" id="pwd" placeholder="••••••••" required />
+        </div>
+
+        <div class="auth-form__row">
+          <label class="checkbox">
+            <input type="checkbox" /> Se souvenir de moi
+          </label>
+          <a href="#" class="auth-link">Mot de passe oublié ?</a>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--full">Se connecter</button>
+      </form>
+
+      <div class="auth-divider"><span>ou</span></div>
+
+      <p class="auth-switch">
+        Pas encore de compte ? <a href="inscription.html" class="auth-link">Créer un compte</a>
+      </p>
+    </div>
+  </main>
+
+</body>
+</html>

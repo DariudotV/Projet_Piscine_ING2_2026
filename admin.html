@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageVista — Administration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <div class="navbar__title">Administration</div>
+    <a href="#menu" class="navbar__menu" aria-label="Ouvrir le menu">☰</a>
+  </header>
+
+  <!-- ============ DRAWER NAV ============ -->
+  <nav id="menu" class="menu-drawer">
+    <a href="#" class="menu-drawer__overlay"></a>
+    <div class="menu-drawer__panel">
+      <div class="menu-drawer__header">
+        <span class="menu-drawer__title">Navigation</span>
+        <a href="#" class="menu-drawer__close">×</a>
+      </div>
+      <div class="menu-drawer__nav">
+        <span class="menu-drawer__section">Explorer</span>
+        <a href="destinations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🌍</span>Destinations</a>
+        <a href="hebergements.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏨</span>Hébergements</a>
+        <a href="transports.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🚆</span>Transports</a>
+        <a href="activites.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🎯</span>Activités</a>
+        <span class="menu-drawer__section">Mon espace</span>
+        <a href="profil.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👤</span>Mon profil</a>
+        <a href="mes-groupes.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👥</span>Mes groupes</a>
+        <a href="gestion-groupe.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🗺️</span>Gestion d'itinéraire</a>
+        <a href="mes-reservations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">📅</span>Mes réservations</a>
+        <a href="panier.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🛒</span>Panier</a>
+        <a href="notifications.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🔔</span>Notifications</a>
+        <span class="menu-drawer__section">Prestataire</span>
+        <a href="espace-hote.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏠</span>Espace hôte</a>
+        <span class="menu-drawer__section">Admin</span>
+        <a href="admin.html" class="menu-drawer__link menu-drawer__link--active"><span class="menu-drawer__link__icon">⚙️</span>Administration</a>
+      </div>
+      <div class="menu-drawer__footer">
+        <a href="connexion.html" class="menu-drawer__logout">Se déconnecter</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="admin-layout">
+
+    <!-- ============ SIDEBAR ADMIN ============ -->
+    <aside class="admin-sidebar">
+      <span class="admin-sidebar__title">Espace admin</span>
+      <nav class="admin-nav">
+        <a href="#dashboard" class="admin-nav__link admin-nav__link--active">📊 Tableau de bord</a>
+        <a href="#destinations" class="admin-nav__link">🌍 Destinations</a>
+        <a href="#transports" class="admin-nav__link">🚆 Transports</a>
+        <a href="#activites" class="admin-nav__link">🎯 Activités</a>
+        <a href="#hebergements" class="admin-nav__link">🏨 Annonces hôtes</a>
+        <a href="#users" class="admin-nav__link">👤 Utilisateurs</a>
+        <a href="#admins" class="admin-nav__link">⚙️ Administrateurs</a>
+        <a href="#groupes" class="admin-nav__link">👥 Groupes & voyageurs</a>
+      </nav>
+    </aside>
+
+    <!-- ============ CONTENU ============ -->
+    <main class="admin-main">
+
+      <!-- DASHBOARD KPIs -->
+      <section id="dashboard" class="admin-section">
+        <h1 class="admin-h1">Tableau de bord</h1>
+
+        <div class="kpi-grid">
+          <div class="kpi"><span class="kpi__value">128</span><span class="kpi__label">Utilisateurs</span></div>
+          <div class="kpi"><span class="kpi__value">42</span><span class="kpi__label">Destinations</span></div>
+          <div class="kpi"><span class="kpi__value">96</span><span class="kpi__label">Annonces actives</span></div>
+          <div class="kpi"><span class="kpi__value kpi__value--warning">7</span><span class="kpi__label">Annonces à valider</span></div>
+        </div>
+      </section>
+
+      <!-- DESTINATIONS : CRUD -->
+      <section id="destinations" class="admin-section">
+        <div class="admin-section__head">
+          <h2 class="admin-h2">Catalogue — Destinations</h2>
+          <button class="btn btn--primary">+ Ajouter une destination</button>
+        </div>
+
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr><th>Nom</th><th>Pays</th><th>Continent</th><th>Type</th><th>Statut</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Tokyo</strong></td>
+                <td>Japon</td><td>Asie</td><td>Urbain</td>
+                <td><span class="badge badge--success">Actif</span></td>
+                <td class="table__actions">
+                  <button class="icon-btn" title="Modifier">✏️</button>
+                  <button class="icon-btn icon-btn--danger" title="Supprimer">🗑️</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Lisbonne</strong></td>
+                <td>Portugal</td><td>Europe</td><td>Urbain</td>
+                <td><span class="badge badge--success">Actif</span></td>
+                <td class="table__actions">
+                  <button class="icon-btn">✏️</button>
+                  <button class="icon-btn icon-btn--danger">🗑️</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Bali</strong></td>
+                <td>Indonésie</td><td>Asie</td><td>Plage</td>
+                <td><span class="badge badge--muted">Inactif</span></td>
+                <td class="table__actions">
+                  <button class="icon-btn">✏️</button>
+                  <button class="icon-btn icon-btn--danger">🗑️</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- HÉBERGEMENTS — modération -->
+      <section id="hebergements" class="admin-section">
+        <div class="admin-section__head">
+          <h2 class="admin-h2">Modération des annonces hôtes</h2>
+          <span class="badge badge--warning">7 en attente</span>
+        </div>
+
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr><th>Annonce</th><th>Hôte</th><th>Ville</th><th>Prix/nuit</th><th>Statut</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Villa Florale</strong></td>
+                <td>Marc L.</td><td>Tokyo</td><td>140 €</td>
+                <td><span class="badge badge--warning">En attente</span></td>
+                <td class="table__actions">
+                  <button class="btn btn--success" style="padding: 6px 10px; font-size: 0.8rem;">✓ Valider</button>
+                  <button class="btn btn--danger" style="padding: 6px 10px; font-size: 0.8rem;">✗ Refuser</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Studio Modern Shinjuku</strong></td>
+                <td>Jeanne D.</td><td>Tokyo</td><td>98 €</td>
+                <td><span class="badge badge--success">Publié</span></td>
+                <td class="table__actions">
+                  <button class="icon-btn">✏️</button>
+                  <button class="icon-btn icon-btn--danger">🗑️</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- UTILISATEURS -->
+      <section id="users" class="admin-section">
+        <div class="admin-section__head">
+          <h2 class="admin-h2">Utilisateurs</h2>
+          <input class="form-input" type="search" placeholder="🔍 Rechercher" style="max-width: 240px;" />
+        </div>
+
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr><th>Nom</th><th>Email</th><th>Rôle</th><th>Prestataire</th><th>Statut</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Jeanne Dupont</strong></td>
+                <td>jeanne.dupont@email.com</td>
+                <td><span class="badge badge--info">Voyageur</span></td>
+                <td>✓</td>
+                <td><span class="badge badge--success">Actif</span></td>
+                <td class="table__actions">
+                  <button class="icon-btn">✏️</button>
+                  <button class="icon-btn icon-btn--danger">🚫</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Marc Leroy</strong></td>
+                <td>marc.l@email.com</td>
+                <td><span class="badge badge--info">Voyageur</span></td>
+                <td>—</td>
+                <td><span class="badge badge--success">Actif</span></td>
+                <td class="table__actions">
+                  <button class="icon-btn">✏️</button>
+                  <button class="icon-btn icon-btn--danger">🚫</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Léa Martin</strong></td>
+                <td>lea.m@email.com</td>
+                <td><span class="badge badge--info">Voyageur</span></td>
+                <td>—</td>
+                <td><span class="badge badge--muted">Suspendu</span></td>
+                <td class="table__actions">
+                  <button class="icon-btn">✏️</button>
+                  <button class="icon-btn icon-btn--danger">🚫</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ADMINISTRATEURS -->
+      <section id="admins" class="admin-section">
+        <div class="admin-section__head">
+          <h2 class="admin-h2">Gestion des administrateurs</h2>
+          <button class="btn btn--primary">+ Ajouter un administrateur</button>
+        </div>
+
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr><th>Nom</th><th>Email</th><th>Permissions</th><th>Ajouté le</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Super Admin</strong></td>
+                <td>admin@voyagevista.fr</td>
+                <td><span class="badge badge--info">Toutes</span></td>
+                <td>10/01/2025</td>
+                <td class="table__actions">
+                  <button class="icon-btn" title="Modifier permissions">✏️</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Sophie Mod.</strong></td>
+                <td>sophie@voyagevista.fr</td>
+                <td>
+                  <span class="badge badge--muted">Catalogue</span>
+                  <span class="badge badge--muted">Modération</span>
+                </td>
+                <td>15/03/2025</td>
+                <td class="table__actions">
+                  <button class="icon-btn">✏️</button>
+                  <button class="icon-btn icon-btn--danger" title="Retirer">🗑️</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- GROUPES & VOYAGEURS -->
+      <section id="groupes" class="admin-section">
+        <div class="admin-section__head">
+          <h2 class="admin-h2">Groupes et voyageurs</h2>
+        </div>
+
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr><th>Groupe</th><th>Destination</th><th>Chef</th><th>Voyageurs</th><th>Statut</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Japon 2027</strong></td>
+                <td>Tokyo</td>
+                <td>Jeanne Dupont</td>
+                <td>4</td>
+                <td><span class="badge badge--success">Réservé</span></td>
+                <td class="table__actions">
+                  <button class="icon-btn" title="Voir voyageurs">👥</button>
+                  <button class="icon-btn" title="Modifier">✏️</button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Brésil 2028</strong></td>
+                <td>Rio</td>
+                <td>Marc Leroy</td>
+                <td>5</td>
+                <td><span class="badge badge--info">En planification</span></td>
+                <td class="table__actions">
+                  <button class="icon-btn">👥</button>
+                  <button class="icon-btn">✏️</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>

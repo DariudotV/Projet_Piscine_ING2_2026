@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageVista — Mon Profil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="profil.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <div class="navbar__title">Mon Profil</div>
+    <a href="#menu" class="navbar__menu" aria-label="Ouvrir le menu">☰</a>
+  </header>
+
+  <!-- ============ DRAWER NAV ============ -->
+  <nav id="menu" class="menu-drawer" aria-label="Menu principal">
+    <a href="#" class="menu-drawer__overlay" aria-label="Fermer"></a>
+    <div class="menu-drawer__panel">
+      <div class="menu-drawer__header">
+        <span class="menu-drawer__title">Navigation</span>
+        <a href="#" class="menu-drawer__close" aria-label="Fermer">×</a>
+      </div>
+      <div class="menu-drawer__nav">
+        <span class="menu-drawer__section">Explorer</span>
+        <a href="destinations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🌍</span>Destinations</a>
+        <a href="hebergements.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏨</span>Hébergements</a>
+        <a href="transports.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🚆</span>Transports</a>
+        <a href="activites.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🎯</span>Activités</a>
+
+        <span class="menu-drawer__section">Mon espace</span>
+        <a href="profil.html" class="menu-drawer__link menu-drawer__link--active"><span class="menu-drawer__link__icon">👤</span>Mon profil</a>
+        <a href="mes-groupes.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👥</span>Mes groupes</a>
+        <a href="gestion-groupe.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🗺️</span>Gestion d'itinéraire</a>
+        <a href="mes-reservations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">📅</span>Mes réservations</a>
+        <a href="panier.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🛒</span>Panier</a>
+        <a href="notifications.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🔔</span>Notifications</a>
+
+        <span class="menu-drawer__section">Prestataire</span>
+        <a href="espace-hote.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏠</span>Espace hôte</a>
+
+        <span class="menu-drawer__section">Admin</span>
+        <a href="admin.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">⚙️</span>Administration</a>
+      </div>
+      <div class="menu-drawer__footer">
+        <a href="connexion.html" class="menu-drawer__logout">Se déconnecter</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ CONTENU ============ -->
+  <main class="page profil-page">
+
+    <!-- En-tête profil : consultation -->
+    <section class="profil-header">
+      <div class="profil-header__avatar">JD</div>
+      <div class="profil-header__info">
+        <h1 class="profil-header__name">Jeanne Dupont</h1>
+        <p class="profil-header__email">jeanne.dupont@email.com</p>
+        <div class="profil-header__badges">
+          <span class="badge badge--info">Voyageur</span>
+          <span class="badge badge--success">Prestataire actif</span>
+          <span class="badge badge--muted">Membre depuis 2025</span>
+        </div>
+      </div>
+      <div class="profil-header__actions">
+        <a href="connexion.html" class="btn btn--danger">Se déconnecter</a>
+      </div>
+    </section>
+
+    <!-- Statistiques rapides -->
+    <section class="profil-stats">
+      <div class="stat">
+        <span class="stat__value">3</span>
+        <span class="stat__label">Groupes de voyage</span>
+      </div>
+      <div class="stat">
+        <span class="stat__value">7</span>
+        <span class="stat__label">Réservations</span>
+      </div>
+      <div class="stat">
+        <span class="stat__value">2</span>
+        <span class="stat__label">Annonces hôte</span>
+      </div>
+      <div class="stat">
+        <span class="stat__value">12</span>
+        <span class="stat__label">Notifications</span>
+      </div>
+    </section>
+
+    <!-- Formulaire de modification -->
+    <section class="card-block profil-form">
+      <h2 class="profil-form__title">Informations personnelles</h2>
+      <p class="profil-form__hint">Modifiez vos informations puis cliquez sur « Enregistrer ».</p>
+
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="prenom">Prénom</label>
+            <input class="form-input" type="text" id="prenom" value="Jeanne" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="nom">Nom</label>
+            <input class="form-input" type="text" id="nom" value="Dupont" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" value="jeanne.dupont@email.com" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="pwd">Nouveau mot de passe</label>
+            <input class="form-input" type="password" id="pwd" placeholder="Laisser vide pour ne pas changer" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="tel">Téléphone</label>
+            <input class="form-input" type="tel" id="tel" placeholder="06 12 34 56 78" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Devenir prestataire (hôte)</label>
+          <label class="checkbox">
+            <input type="checkbox" checked />
+            J'autorise la publication d'annonces d'hébergement (modèle Airbnb)
+          </label>
+        </div>
+
+        <div class="profil-form__actions">
+          <button type="reset" class="btn btn--ghost">Annuler</button>
+          <button type="submit" class="btn btn--primary">Enregistrer les modifications</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+</body>
+</html>

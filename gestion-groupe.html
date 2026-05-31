@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageVista — Gestion Groupe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="gestion-groupe.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <div class="navbar__title">Gestion d'itinéraire</div>
+    <a href="#menu" class="navbar__menu" aria-label="Ouvrir le menu">☰</a>
+  </header>
+
+  <!-- ============ DRAWER NAV ============ -->
+  <nav id="menu" class="menu-drawer">
+    <a href="#" class="menu-drawer__overlay"></a>
+    <div class="menu-drawer__panel">
+      <div class="menu-drawer__header">
+        <span class="menu-drawer__title">Navigation</span>
+        <a href="#" class="menu-drawer__close">×</a>
+      </div>
+      <div class="menu-drawer__nav">
+        <span class="menu-drawer__section">Explorer</span>
+        <a href="destinations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🌍</span>Destinations</a>
+        <a href="hebergements.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏨</span>Hébergements</a>
+        <a href="transports.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🚆</span>Transports</a>
+        <a href="activites.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🎯</span>Activités</a>
+        <span class="menu-drawer__section">Mon espace</span>
+        <a href="profil.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👤</span>Mon profil</a>
+        <a href="mes-groupes.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👥</span>Mes groupes</a>
+        <a href="gestion-groupe.html" class="menu-drawer__link menu-drawer__link--active"><span class="menu-drawer__link__icon">🗺️</span>Gestion d'itinéraire</a>
+        <a href="mes-reservations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">📅</span>Mes réservations</a>
+        <a href="panier.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🛒</span>Panier</a>
+        <a href="notifications.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🔔</span>Notifications</a>
+        <span class="menu-drawer__section">Prestataire</span>
+        <a href="espace-hote.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏠</span>Espace hôte</a>
+        <span class="menu-drawer__section">Admin</span>
+        <a href="admin.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">⚙️</span>Administration</a>
+      </div>
+      <div class="menu-drawer__footer">
+        <a href="connexion.html" class="menu-drawer__logout">Se déconnecter</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <button class="topbar__field">Destination</button>
+    <button class="topbar__field">Nom du Groupe</button>
+    <button class="topbar__field">Budget Max</button>
+    <button class="topbar__add" aria-label="Créer groupe">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    </button>
+  </div>
+
+  <!-- 3 COLONNES -->
+  <div class="workspace">
+
+    <!-- COL 1 : CATALOGUE -->
+    <aside class="col col--catalogue">
+      <div class="col__header">
+        <span class="col__title">Catalogue</span>
+        <div class="filters">
+          <button class="filter-btn">Type</button>
+          <button class="filter-btn">Date</button>
+          <button class="filter-btn">Prix</button>
+        </div>
+      </div>
+
+      <ul class="catalogue-list">
+        <li class="catalogue-item">
+          <div class="catalogue-item__photo">Photo</div>
+          <div class="catalogue-item__info">
+            <span class="catalogue-item__name">Ibiscus Hotel</span>
+            <span class="catalogue-item__price">24 €/n</span>
+          </div>
+        </li>
+        <li class="catalogue-item">
+          <div class="catalogue-item__photo">Photo</div>
+          <div class="catalogue-item__info">
+            <span class="catalogue-item__name">Villa Florale</span>
+            <span class="catalogue-item__price">45 €/n</span>
+          </div>
+        </li>
+        <li class="catalogue-item">
+          <div class="catalogue-item__photo">Photo</div>
+          <div class="catalogue-item__info">
+            <span class="catalogue-item__name">Kayak en Rivière</span>
+            <span class="catalogue-item__price">15 €/h</span>
+          </div>
+        </li>
+      </ul>
+
+      <button class="suggest-btn">Suggérer +</button>
+    </aside>
+
+    <!-- COL 2 : SUGGESTIONS -->
+    <section class="col col--suggestions">
+      <div class="suggestion-card">
+        <div class="suggestion__author">
+          <div class="suggestion__avatar"></div>
+          <span class="suggestion__text">… a suggéré pour le 24/02 à 10h :</span>
+        </div>
+        <div class="suggestion__content">
+          <div class="suggestion__photo">Photo</div>
+          <div class="suggestion__detail">
+            <span class="suggestion__name">Kayak en Rivière</span>
+            <span class="suggestion__price">15 €/h</span>
+          </div>
+        </div>
+        <div class="suggestion__actions">
+          <button class="action-btn action-btn--accept" aria-label="Accepter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+          <button class="action-btn action-btn--reject" aria-label="Refuser">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- COL 3 : ITINERAIRE -->
+    <aside class="col col--itinerary">
+      <div class="col__title">Rappel et organisation chronologique</div>
+
+      <div class="timeline">
+        <div class="timeline__item timeline__item--empty">
+          <span>Aucun élément ajouté</span>
+        </div>
+      </div>
+
+      <div class="itinerary__footer">
+        <div class="cost-per-person">
+          <span class="cost-per-person__label">Coût par personne</span>
+          <span class="cost-per-person__value">— €</span>
+        </div>
+        <a href="panier.html" class="pay-btn">Payer</a>
+      </div>
+    </aside>
+
+  </div>
+
+</body>
+</html>

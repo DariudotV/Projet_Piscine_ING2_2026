@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageVista — Panier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="panier.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <div class="navbar__title">Panier de voyage</div>
+    <a href="#menu" class="navbar__menu" aria-label="Ouvrir le menu">☰</a>
+  </header>
+
+  <!-- ============ DRAWER NAV ============ -->
+  <nav id="menu" class="menu-drawer" aria-label="Menu principal">
+    <a href="#" class="menu-drawer__overlay" aria-label="Fermer"></a>
+    <div class="menu-drawer__panel">
+      <div class="menu-drawer__header">
+        <span class="menu-drawer__title">Navigation</span>
+        <a href="#" class="menu-drawer__close" aria-label="Fermer">×</a>
+      </div>
+      <div class="menu-drawer__nav">
+        <span class="menu-drawer__section">Explorer</span>
+        <a href="destinations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🌍</span>Destinations</a>
+        <a href="hebergements.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏨</span>Hébergements</a>
+        <a href="transports.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🚆</span>Transports</a>
+        <a href="activites.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🎯</span>Activités</a>
+        <span class="menu-drawer__section">Mon espace</span>
+        <a href="profil.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👤</span>Mon profil</a>
+        <a href="mes-groupes.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👥</span>Mes groupes</a>
+        <a href="gestion-groupe.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🗺️</span>Gestion d'itinéraire</a>
+        <a href="mes-reservations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">📅</span>Mes réservations</a>
+        <a href="panier.html" class="menu-drawer__link menu-drawer__link--active"><span class="menu-drawer__link__icon">🛒</span>Panier</a>
+        <a href="notifications.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🔔</span>Notifications</a>
+        <span class="menu-drawer__section">Prestataire</span>
+        <a href="espace-hote.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏠</span>Espace hôte</a>
+        <span class="menu-drawer__section">Admin</span>
+        <a href="admin.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">⚙️</span>Administration</a>
+      </div>
+      <div class="menu-drawer__footer">
+        <a href="connexion.html" class="menu-drawer__logout">Se déconnecter</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <h1 class="page__title">Votre panier — Japon 2027</h1>
+    <p class="page__subtitle">Vérifiez les éléments puis validez la réservation. Seul le chef de groupe peut payer.</p>
+
+    <div class="cart-layout">
+
+      <!-- ============ COLONNE GAUCHE : ÉLÉMENTS DU PANIER ============ -->
+      <section class="cart-items">
+
+        <!-- Catégorie : Transport -->
+        <h2 class="cart-section__title">🚆 Transport</h2>
+
+        <article class="cart-item">
+          <div class="cart-item__icon">✈️</div>
+          <div class="cart-item__info">
+            <span class="cart-item__name">Vol Paris CDG → Tokyo NRT</span>
+            <span class="cart-item__meta">Air France · 15/07 10:30 → 16/07 17:15</span>
+            <span class="cart-item__sub">× 4 voyageurs</span>
+          </div>
+          <div class="cart-item__price">2 720 €</div>
+          <div class="cart-item__actions">
+            <button class="icon-btn" title="Modifier">✏️</button>
+            <button class="icon-btn icon-btn--danger" title="Supprimer">🗑️</button>
+          </div>
+        </article>
+
+        <article class="cart-item">
+          <div class="cart-item__icon">✈️</div>
+          <div class="cart-item__info">
+            <span class="cart-item__name">Vol Tokyo NRT → Paris CDG</span>
+            <span class="cart-item__meta">Air France · 22/07 20:00 → 23/07 06:30</span>
+            <span class="cart-item__sub">× 4 voyageurs</span>
+          </div>
+          <div class="cart-item__price">2 480 €</div>
+          <div class="cart-item__actions">
+            <button class="icon-btn" title="Modifier">✏️</button>
+            <button class="icon-btn icon-btn--danger" title="Supprimer">🗑️</button>
+          </div>
+        </article>
+
+        <!-- Catégorie : Hébergement -->
+        <h2 class="cart-section__title">🏨 Hébergement</h2>
+
+        <article class="cart-item">
+          <div class="cart-item__icon">🛏️</div>
+          <div class="cart-item__info">
+            <span class="cart-item__name">Ibiscus Hotel — Shibuya, Tokyo</span>
+            <span class="cart-item__meta">Du 16/07 au 22/07 · 6 nuits</span>
+            <span class="cart-item__sub">85 €/nuit · 4 voyageurs</span>
+          </div>
+          <div class="cart-item__price">510 €</div>
+          <div class="cart-item__actions">
+            <button class="icon-btn" title="Modifier">✏️</button>
+            <button class="icon-btn icon-btn--danger" title="Supprimer">🗑️</button>
+          </div>
+        </article>
+
+        <!-- Catégorie : Activités -->
+        <h2 class="cart-section__title">🎯 Activités</h2>
+
+        <article class="cart-item">
+          <div class="cart-item__icon">⛩️</div>
+          <div class="cart-item__info">
+            <span class="cart-item__name">Visite Temple Senso-ji</span>
+            <span class="cart-item__meta">17/07 — 10h00</span>
+            <span class="cart-item__sub">18 € × 4</span>
+          </div>
+          <div class="cart-item__price">72 €</div>
+          <div class="cart-item__actions">
+            <button class="icon-btn" title="Modifier">✏️</button>
+            <button class="icon-btn icon-btn--danger" title="Supprimer">🗑️</button>
+          </div>
+        </article>
+
+        <article class="cart-item">
+          <div class="cart-item__icon">🛶</div>
+          <div class="cart-item__info">
+            <span class="cart-item__name">Kayak en rivière (Mont Fuji)</span>
+            <span class="cart-item__meta">19/07 — 14h00</span>
+            <span class="cart-item__sub">45 € × 4</span>
+          </div>
+          <div class="cart-item__price">180 €</div>
+          <div class="cart-item__actions">
+            <button class="icon-btn" title="Modifier">✏️</button>
+            <button class="icon-btn icon-btn--danger" title="Supprimer">🗑️</button>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- ============ COLONNE DROITE : RÉSUMÉ ============ -->
+      <aside class="cart-summary">
+        <h2 class="cart-summary__title">Résumé</h2>
+
+        <ul class="cart-summary__lines">
+          <li><span>Transports</span><span>5 200 €</span></li>
+          <li><span>Hébergement</span><span>510 €</span></li>
+          <li><span>Activités</span><span>252 €</span></li>
+          <li class="cart-summary__sep"></li>
+          <li><span>Sous-total</span><span>5 962 €</span></li>
+          <li><span>Frais de service</span><span>38 €</span></li>
+        </ul>
+
+        <div class="cart-summary__total">
+          <span>Total</span>
+          <strong>6 000 €</strong>
+        </div>
+
+        <div class="cart-summary__per-person">
+          <span>Coût par personne (4 voyageurs)</span>
+          <strong>1 500 €</strong>
+        </div>
+
+        <a href="paiement.html" class="btn btn--accent btn--full" style="margin-top: 16px;">
+          Valider et payer
+        </a>
+        <a href="gestion-groupe.html" class="btn btn--ghost btn--full" style="margin-top: 8px;">
+          Continuer la composition
+        </a>
+
+        <p class="cart-summary__note">
+          ℹ️ Le coût est recalculé dynamiquement à chaque modification de l'itinéraire.
+        </p>
+      </aside>
+
+    </div>
+  </main>
+
+</body>
+</html>

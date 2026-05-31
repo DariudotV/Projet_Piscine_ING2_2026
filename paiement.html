@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageVista — Paiement</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="paiement.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <div class="navbar__title">Paiement sécurisé</div>
+    <a href="panier.html" class="navbar__menu" aria-label="Retour panier">×</a>
+  </header>
+
+  <main class="page">
+
+    <!-- Étapes du tunnel -->
+    <div class="stepper">
+      <div class="stepper__step stepper__step--done">1. Panier</div>
+      <div class="stepper__step stepper__step--active">2. Paiement</div>
+      <div class="stepper__step">3. Confirmation</div>
+    </div>
+
+    <div class="pay-layout">
+
+      <!-- ============ COLONNE GAUCHE : INFOS CLIENT + CARTE ============ -->
+      <section class="pay-form">
+
+        <div class="card-block">
+          <h2 class="pay-form__title">Informations du chef de groupe</h2>
+          <p class="pay-form__hint">Ces informations apparaîtront sur la facture.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Prénom</label>
+              <input class="form-input" type="text" value="Jeanne" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Nom</label>
+              <input class="form-input" type="text" value="Dupont" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Email de facturation</label>
+            <input class="form-input" type="email" value="jeanne.dupont@email.com" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Téléphone</label>
+              <input class="form-input" type="tel" placeholder="06 12 34 56 78" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Pays</label>
+              <select class="form-select">
+                <option>France</option>
+                <option>Belgique</option>
+                <option>Suisse</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Adresse</label>
+            <input class="form-input" type="text" placeholder="12 rue de la Paix, 75001 Paris" />
+          </div>
+        </div>
+
+        <div class="card-block">
+          <h2 class="pay-form__title">Moyen de paiement</h2>
+
+          <!-- Tabs méthodes (visuel uniquement) -->
+          <div class="pay-tabs">
+            <label class="pay-tab pay-tab--active">
+              <input type="radio" name="method" checked /> 💳 Carte bancaire
+            </label>
+            <label class="pay-tab">
+              <input type="radio" name="method" /> 🅿️ PayPal
+            </label>
+            <label class="pay-tab">
+              <input type="radio" name="method" /> 🍎 Apple Pay
+            </label>
+          </div>
+
+          <!-- Visualisation carte -->
+          <div class="credit-card">
+            <div class="credit-card__brand">VISA</div>
+            <div class="credit-card__chip"></div>
+            <div class="credit-card__number">•••• •••• •••• 4242</div>
+            <div class="credit-card__row">
+              <div>
+                <span class="credit-card__label">Titulaire</span>
+                <span class="credit-card__value">JEANNE DUPONT</span>
+              </div>
+              <div>
+                <span class="credit-card__label">Expire</span>
+                <span class="credit-card__value">12/28</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Champs carte -->
+          <div class="form-group">
+            <label class="form-label">Numéro de carte</label>
+            <input class="form-input" type="text" placeholder="1234 5678 9012 3456" maxlength="19" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Expiration</label>
+              <input class="form-input" type="text" placeholder="MM/AA" maxlength="5" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">CVC</label>
+              <input class="form-input" type="text" placeholder="123" maxlength="4" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Titulaire</label>
+              <input class="form-input" type="text" placeholder="Nom complet" />
+            </div>
+          </div>
+
+          <label class="checkbox" style="margin-top: 10px;">
+            <input type="checkbox" /> Enregistrer cette carte pour mes prochaines réservations
+          </label>
+        </div>
+
+        <p class="pay-form__legal">
+          🔒 Paiement sécurisé (simulé). Vos données ne sont pas conservées en clair.
+          Conformément à nos règles, une réservation confirmée est immuable.
+        </p>
+      </section>
+
+      <!-- ============ COLONNE DROITE : RÉCAP ============ -->
+      <aside class="pay-summary">
+        <h2 class="pay-summary__title">Récapitulatif</h2>
+        <div class="pay-summary__group">
+          <span class="pay-summary__group-title">Japon 2027 — 4 voyageurs</span>
+        </div>
+        <ul class="pay-summary__lines">
+          <li><span>Vols A/R × 4</span><span>5 200 €</span></li>
+          <li><span>Ibiscus Hotel (6 nuits)</span><span>510 €</span></li>
+          <li><span>2 activités</span><span>252 €</span></li>
+          <li><span>Frais de service</span><span>38 €</span></li>
+        </ul>
+        <div class="pay-summary__total">
+          <span>Total à régler</span>
+          <strong>6 000 €</strong>
+        </div>
+
+        <a href="confirmation.html" class="btn btn--accent btn--full" style="margin-top: 18px;">
+          Payer 6 000 €
+        </a>
+        <a href="panier.html" class="btn btn--ghost btn--full" style="margin-top: 8px;">
+          Retour au panier
+        </a>
+      </aside>
+
+    </div>
+  </main>
+
+</body>
+</html>

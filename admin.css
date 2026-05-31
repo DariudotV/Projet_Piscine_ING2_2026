@@ -1,0 +1,251 @@
+/* ============ ADMIN LAYOUT ============ */
+.admin-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  max-width: 1400px;
+  margin: 24px auto;
+  padding: 0 24px;
+}
+
+/* ============ SIDEBAR ============ */
+.admin-sidebar {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 16px;
+  height: fit-content;
+  position: sticky;
+  top: 88px;
+}
+
+.admin-sidebar__title {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  padding: 0 8px 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.admin-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--text);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.admin-nav__link:hover {
+  background: var(--primary-soft);
+  color: var(--primary-dark);
+}
+
+.admin-nav__link--active {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.admin-nav__link--active:hover {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+/* ============ MAIN AREA ============ */
+.admin-main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+.admin-h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 4px 0;
+}
+
+.admin-h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.admin-section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  scroll-margin-top: 88px;
+}
+
+.admin-section__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+/* ============ KPI ============ */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.kpi {
+  background: var(--primary-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kpi__value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1.1;
+}
+
+.kpi__value--warning {
+  color: var(--accent-dark);
+}
+
+.kpi__label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ============ TABLE ACTIONS ============ */
+.table__actions {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+/* ============ MODERATION ROW ============ */
+.mod-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  flex-wrap: wrap;
+}
+
+.mod-row + .mod-row {
+  margin-top: 10px;
+}
+
+.mod-row__info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.mod-row__title {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.mod-row__meta {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.mod-row__actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ============ ADMIN CARD (admins list) ============ */
+.admin-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  flex-wrap: wrap;
+}
+
+.admin-card + .admin-card {
+  margin-top: 10px;
+}
+
+.admin-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.admin-card__name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.admin-card__email {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.admin-card__perms {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 900px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+  .admin-sidebar {
+    position: static;
+  }
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .admin-layout {
+    padding: 0 12px;
+  }
+  .admin-section {
+    padding: 16px;
+  }
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}

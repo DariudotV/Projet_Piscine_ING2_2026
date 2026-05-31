@@ -1,0 +1,87 @@
+/* notifications.css */
+
+.notif-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.notif-head__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ============ LIST ============ */
+.notif-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notif {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  gap: 14px;
+  align-items: center;
+  box-shadow: var(--shadow);
+  transition: background 0.2s;
+}
+.notif--unread {
+  background: var(--primary-soft);
+  border-color: #BFDBFE;
+}
+.notif--unread:hover { background: #E0EAFE; }
+
+.notif__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+.notif:not(.notif--unread) .notif__dot { display: none; }
+.notif:not(.notif--unread) {
+  grid-template-columns: auto 1fr auto;
+}
+
+.notif__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.notif__icon--success { background: #D1FAE5; color: #065F46; }
+.notif__icon--info    { background: var(--primary-soft); color: var(--primary-dark); }
+.notif__icon--warning { background: #FEF3C7; color: #92400E; }
+
+.notif__body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.notif__title { font-weight: 700; font-size: 0.95rem; }
+.notif__text  { color: var(--text-muted); font-size: 0.86rem; line-height: 1.4; }
+.notif__date  { color: var(--text-muted); font-size: 0.74rem; margin-top: 2px; }
+
+/* Réutilise le style icon-btn défini dans panier.css mais on le redéclare au cas où */
+.icon-btn {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.icon-btn:hover { background: var(--primary-soft); border-color: var(--primary); color: var(--primary); }
+.icon-btn--danger:hover { background: #FEE2E2; border-color: var(--danger); color: var(--danger); }

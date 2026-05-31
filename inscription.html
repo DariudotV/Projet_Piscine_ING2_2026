@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageVista — Inscription</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body class="auth-body">
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <div class="navbar__title">Inscription</div>
+    <a href="accueil.html" class="navbar__menu" aria-label="Retour à l'accueil">×</a>
+  </header>
+
+  <!-- ============ ZONE AUTH ============ -->
+  <main class="auth">
+    <div class="auth-card auth-card--wide">
+      <h1 class="auth-card__title">Créer votre compte ✈️</h1>
+      <p class="auth-card__subtitle">Rejoignez la communauté et organisez votre premier voyage.</p>
+
+      <!-- Formulaire d'inscription -->
+      <form class="auth-form" action="profil.html">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="prenom">Prénom</label>
+            <input class="form-input" type="text" id="prenom" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="nom">Nom</label>
+            <input class="form-input" type="text" id="nom" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Adresse email</label>
+          <input class="form-input" type="email" id="email" placeholder="prenom.nom@email.com" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="pwd">Mot de passe</label>
+            <input class="form-input" type="password" id="pwd" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="pwd2">Confirmation</label>
+            <input class="form-input" type="password" id="pwd2" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="date">Date de naissance</label>
+          <input class="form-input" type="date" id="date" />
+        </div>
+
+        <label class="checkbox">
+          <input type="checkbox" required />
+          J'accepte les <a href="#" class="auth-link">conditions d'utilisation</a>
+        </label>
+
+        <button type="submit" class="btn btn--primary btn--full" style="margin-top: 14px;">Créer mon compte</button>
+      </form>
+
+      <div class="auth-divider"><span>ou</span></div>
+
+      <p class="auth-switch">
+        Déjà un compte ? <a href="connexion.html" class="auth-link">Se connecter</a>
+      </p>
+    </div>
+  </main>
+
+</body>
+</html>

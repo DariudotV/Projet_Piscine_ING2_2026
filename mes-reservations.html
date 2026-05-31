@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageVista — Mes réservations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="reservations.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <div class="navbar__title">Mes réservations</div>
+    <a href="#menu" class="navbar__menu" aria-label="Ouvrir le menu">☰</a>
+  </header>
+
+  <!-- ============ DRAWER NAV ============ -->
+  <nav id="menu" class="menu-drawer">
+    <a href="#" class="menu-drawer__overlay"></a>
+    <div class="menu-drawer__panel">
+      <div class="menu-drawer__header">
+        <span class="menu-drawer__title">Navigation</span>
+        <a href="#" class="menu-drawer__close">×</a>
+      </div>
+      <div class="menu-drawer__nav">
+        <span class="menu-drawer__section">Explorer</span>
+        <a href="destinations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🌍</span>Destinations</a>
+        <a href="hebergements.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏨</span>Hébergements</a>
+        <a href="transports.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🚆</span>Transports</a>
+        <a href="activites.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🎯</span>Activités</a>
+        <span class="menu-drawer__section">Mon espace</span>
+        <a href="profil.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👤</span>Mon profil</a>
+        <a href="mes-groupes.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👥</span>Mes groupes</a>
+        <a href="gestion-groupe.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🗺️</span>Gestion d'itinéraire</a>
+        <a href="mes-reservations.html" class="menu-drawer__link menu-drawer__link--active"><span class="menu-drawer__link__icon">📅</span>Mes réservations</a>
+        <a href="panier.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🛒</span>Panier</a>
+        <a href="notifications.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🔔</span>Notifications</a>
+        <span class="menu-drawer__section">Prestataire</span>
+        <a href="espace-hote.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏠</span>Espace hôte</a>
+        <span class="menu-drawer__section">Admin</span>
+        <a href="admin.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">⚙️</span>Administration</a>
+      </div>
+      <div class="menu-drawer__footer">
+        <a href="connexion.html" class="menu-drawer__logout">Se déconnecter</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <h1 class="page__title">Mes réservations</h1>
+    <p class="page__subtitle">Consultez, modifiez ou annulez vos voyages.</p>
+
+    <!-- Filtres -->
+    <div class="reservations-filters">
+      <button class="chip chip--active">Toutes</button>
+      <button class="chip">À venir</button>
+      <button class="chip">En cours</button>
+      <button class="chip">Passées</button>
+      <button class="chip">Annulées</button>
+    </div>
+
+    <!-- ============ LISTE RÉSERVATIONS ============ -->
+    <section class="reservations">
+
+      <!-- Réservation confirmée -->
+      <article class="reservation">
+        <div class="reservation__cover">🗾</div>
+        <div class="reservation__main">
+          <header class="reservation__head">
+            <div>
+              <h2 class="reservation__title">Japon 2027</h2>
+              <span class="reservation__ref">Réf. VV-2026-Q9TX42</span>
+            </div>
+            <span class="badge badge--success">Confirmée</span>
+          </header>
+
+          <div class="reservation__meta">
+            <div><span>📅 Dates</span><strong>15 → 23 juillet 2026</strong></div>
+            <div><span>👥 Voyageurs</span><strong>4 personnes</strong></div>
+            <div><span>💳 Total</span><strong>6 000 €</strong></div>
+            <div><span>👑 Chef</span><strong>Jeanne Dupont</strong></div>
+          </div>
+
+          <div class="reservation__actions">
+            <a href="gestion-groupe.html" class="btn btn--ghost">Voir détail</a>
+            <button class="btn btn--ghost">✏️ Modifier</button>
+            <button class="btn btn--danger">🗑️ Annuler</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Réservation à venir -->
+      <article class="reservation">
+        <div class="reservation__cover">🏝️</div>
+        <div class="reservation__main">
+          <header class="reservation__head">
+            <div>
+              <h2 class="reservation__title">Brésil 2028</h2>
+              <span class="reservation__ref">Réf. VV-2026-K4PL11</span>
+            </div>
+            <span class="badge badge--info">À venir</span>
+          </header>
+
+          <div class="reservation__meta">
+            <div><span>📅 Dates</span><strong>2 → 14 février 2028</strong></div>
+            <div><span>👥 Voyageurs</span><strong>5 personnes</strong></div>
+            <div><span>💳 Total</span><strong>9 500 €</strong></div>
+            <div><span>👑 Chef</span><strong>Marc L.</strong></div>
+          </div>
+
+          <div class="reservation__actions">
+            <a href="gestion-groupe.html" class="btn btn--ghost">Voir détail</a>
+            <button class="btn btn--ghost">✏️ Modifier</button>
+            <button class="btn btn--danger">🗑️ Annuler</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Réservation passée -->
+      <article class="reservation reservation--past">
+        <div class="reservation__cover">🇵🇹</div>
+        <div class="reservation__main">
+          <header class="reservation__head">
+            <div>
+              <h2 class="reservation__title">Lisbonne 2025</h2>
+              <span class="reservation__ref">Réf. VV-2025-A1B2C3</span>
+            </div>
+            <span class="badge badge--muted">Terminée</span>
+          </header>
+
+          <div class="reservation__meta">
+            <div><span>📅 Dates</span><strong>10 → 17 août 2025</strong></div>
+            <div><span>👥 Voyageurs</span><strong>3 personnes</strong></div>
+            <div><span>💳 Total</span><strong>1 980 €</strong></div>
+            <div><span>👑 Chef</span><strong>Jeanne Dupont</strong></div>
+          </div>
+
+          <div class="reservation__actions">
+            <a href="gestion-groupe.html" class="btn btn--ghost">Voir détail</a>
+            <button class="btn btn--ghost">📄 Facture</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Réservation annulée -->
+      <article class="reservation reservation--cancelled">
+        <div class="reservation__cover">🏔️</div>
+        <div class="reservation__main">
+          <header class="reservation__head">
+            <div>
+              <h2 class="reservation__title">Annecy 2024</h2>
+              <span class="reservation__ref">Réf. VV-2024-Z9X8Y7</span>
+            </div>
+            <span class="badge badge--danger">Annulée</span>
+          </header>
+
+          <div class="reservation__meta">
+            <div><span>📅 Dates</span><strong>20 → 24 déc. 2024</strong></div>
+            <div><span>👥 Voyageurs</span><strong>2 personnes</strong></div>
+            <div><span>💳 Remboursé</span><strong>450 €</strong></div>
+            <div><span>👑 Chef</span><strong>Jeanne Dupont</strong></div>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+</body>
+</html>

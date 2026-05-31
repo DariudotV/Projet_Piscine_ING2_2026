@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageVista — Hébergements</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="catalogue.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <a href="accueil.html" class="navbar__logo">VoyageVista</a>
+    <div class="navbar__title">Hébergements</div>
+    <a href="#menu" class="navbar__menu" aria-label="Ouvrir le menu">☰</a>
+  </header>
+
+  <!-- ============ DRAWER NAV ============ -->
+  <nav id="menu" class="menu-drawer" aria-label="Menu principal">
+    <a href="#" class="menu-drawer__overlay" aria-label="Fermer"></a>
+    <div class="menu-drawer__panel">
+      <div class="menu-drawer__header">
+        <span class="menu-drawer__title">Navigation</span>
+        <a href="#" class="menu-drawer__close" aria-label="Fermer">×</a>
+      </div>
+      <div class="menu-drawer__nav">
+        <span class="menu-drawer__section">Explorer</span>
+        <a href="destinations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🌍</span>Destinations</a>
+        <a href="hebergements.html" class="menu-drawer__link menu-drawer__link--active"><span class="menu-drawer__link__icon">🏨</span>Hébergements</a>
+        <a href="transports.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🚆</span>Transports</a>
+        <a href="activites.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🎯</span>Activités</a>
+        <span class="menu-drawer__section">Mon espace</span>
+        <a href="profil.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👤</span>Mon profil</a>
+        <a href="mes-groupes.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">👥</span>Mes groupes</a>
+        <a href="gestion-groupe.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🗺️</span>Gestion d'itinéraire</a>
+        <a href="mes-reservations.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">📅</span>Mes réservations</a>
+        <a href="panier.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🛒</span>Panier</a>
+        <a href="notifications.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🔔</span>Notifications</a>
+        <span class="menu-drawer__section">Prestataire</span>
+        <a href="espace-hote.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">🏠</span>Espace hôte</a>
+        <span class="menu-drawer__section">Admin</span>
+        <a href="admin.html" class="menu-drawer__link"><span class="menu-drawer__link__icon">⚙️</span>Administration</a>
+      </div>
+      <div class="menu-drawer__footer">
+        <a href="connexion.html" class="menu-drawer__logout">Se déconnecter</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <h1 class="page__title">Hébergements</h1>
+    <p class="page__subtitle">Trouvez l'endroit parfait pour votre groupe.</p>
+
+    <!-- ============ FORMULAIRE DE RECHERCHE ============ -->
+    <form class="search-form card-block">
+      <div class="search-form__row">
+        <div class="form-group">
+          <label class="form-label">Destination</label>
+          <input class="form-input" type="text" placeholder="Tokyo" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Arrivée</label>
+          <input class="form-input" type="date" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Départ</label>
+          <input class="form-input" type="date" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Voyageurs</label>
+          <input class="form-input" type="number" min="1" value="4" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Budget max / nuit</label>
+          <input class="form-input" type="number" placeholder="120" />
+        </div>
+      </div>
+
+      <div class="search-form__filters">
+        <label class="chip"><input type="checkbox" checked /> 🏨 Hôtel</label>
+        <label class="chip"><input type="checkbox" /> 🏡 Appartement</label>
+        <label class="chip"><input type="checkbox" /> 🛏️ Auberge</label>
+        <label class="chip"><input type="checkbox" /> 🏖️ Villa</label>
+        <select class="form-select" style="max-width: 180px;">
+          <option>Trier par prix ↑</option>
+          <option>Trier par prix ↓</option>
+          <option>Trier par note</option>
+        </select>
+        <button type="submit" class="btn btn--primary">Rechercher</button>
+      </div>
+    </form>
+
+    <!-- ============ RÉSULTATS HÉBERGEMENTS ============ -->
+    <div class="results__head">
+      <h2 class="section__title">12 hébergements trouvés</h2>
+      <span class="results__count">Tokyo · 15 → 22 juillet 2026</span>
+    </div>
+
+    <section class="catalog-grid">
+
+      <!-- Hébergement 1 — disponible -->
+      <article class="cat-card">
+        <div class="cat-card__img">
+          <span class="cat-card__badge badge badge--success">Disponible</span>
+        </div>
+        <div class="cat-card__body">
+          <span class="cat-card__name">Ibiscus Hotel</span>
+          <span class="cat-card__meta">Hôtel · Shibuya, Tokyo · Capacité 4</span>
+          <p class="cat-card__desc">Hôtel moderne au cœur de Shibuya, WiFi, petit-déjeuner inclus.</p>
+          <div class="cat-card__footer">
+            <span class="cat-card__price">85 €/nuit</span>
+            <button class="btn btn--accent">Réserver</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Hébergement 2 — disponible -->
+      <article class="cat-card">
+        <div class="cat-card__img">
+          <span class="cat-card__badge badge badge--success">Disponible</span>
+        </div>
+        <div class="cat-card__body">
+          <span class="cat-card__name">Villa Florale</span>
+          <span class="cat-card__meta">Villa · Asakusa, Tokyo · Capacité 6</span>
+          <p class="cat-card__desc">Villa traditionnelle avec jardin, parfaite pour un groupe.</p>
+          <div class="cat-card__footer">
+            <span class="cat-card__price">140 €/nuit</span>
+            <button class="btn btn--accent">Réserver</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Hébergement 3 — bloqué -->
+      <article class="cat-card">
+        <div class="cat-card__img">
+          <span class="cat-card__badge badge badge--danger">Complet</span>
+        </div>
+        <div class="cat-card__body">
+          <span class="cat-card__name">Sakura Lodge</span>
+          <span class="cat-card__meta">Auberge · Akihabara · Capacité 8</span>
+          <p class="cat-card__desc">Hébergements indisponibles sur ces dates — sélection bloquée.</p>
+          <div class="cat-card__footer">
+            <span class="cat-card__price">52 €/nuit</span>
+            <button class="btn btn--ghost" disabled>Indisponible</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Hébergement 4 -->
+      <article class="cat-card">
+        <div class="cat-card__img">
+          <span class="cat-card__badge badge badge--warning">2 chambres restantes</span>
+        </div>
+        <div class="cat-card__body">
+          <span class="cat-card__name">Studio Modern Shinjuku</span>
+          <span class="cat-card__meta">Appartement · Shinjuku · Capacité 4</span>
+          <p class="cat-card__desc">Studio cosy, terrasse vue panoramique sur la ville.</p>
+          <div class="cat-card__footer">
+            <span class="cat-card__price">98 €/nuit</span>
+            <button class="btn btn--accent">Réserver</button>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="alert alert--info" style="margin-top:24px;">
+      <strong>🛡️ Gestion des disponibilités</strong>
+      Les hébergements indisponibles aux dates de votre itinéraire sont automatiquement bloqués et ne peuvent pas être réservés.
+    </section>
+
+  </main>
+
+</body>
+</html>
