@@ -46,3 +46,46 @@ CREATE TABLE APPARTENIR (
     FOREIGN KEY (id_utilisateur) REFERENCES UTILISATEUR(id) ON DELETE CASCADE,
     FOREIGN KEY (id_groupe) REFERENCES GROUPE(id) ON DELETE CASCADE
 );
+
+CREATE TABLE TRANSPORT (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    type ENUM('avion', 'train', 'bus') NOT NULL,
+    ville_depart VARCHAR(100) NOT NULL,
+    ville_arrivee VARCHAR(100) NOT NULL,
+    prix_par_personne DECIMAL(10, 2) NOT NULL
+);
+
+CREATE TABLE ACTIVITE (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_destination INT NOT NULL,
+    nom VARCHAR(150) NOT NULL,
+    prix_par_personne DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (id_destination) REFERENCES DESTINATION(id) ON DELETE CASCADE
+);
+
+-- les membres épinglent des idées
+CREATE TABLE RECOMMANDATION (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_groupe INT NOT NULL,
+    id_utilisateur INT NOT NULL,
+    type_contenu ENUM('hebergement', 'activite') NOT NULL,
+    id_hebergement INT DEFAULT NULL,
+    id_activite INT DEFAULT NULL,
+    commentaire TEXT,
+    FOREIGN KEY (id_groupe) REFERENCES GROUPE(id) ON DELETE CASCADE,
+    FOREIGN KEY (id_utilisateur) REFERENCES UTILISATEUR(id) ON DELETE CASCADE,
+    FOREIGN KEY (id_hebergement) REFERENCES HEBERGEMENT(id) ON DELETE CASCADE,
+    FOREIGN KEY (id_activite) REFERENCES ACTIVITE(id) ON DELETE CASCADE
+);
+
+-- Le chef de groupe commence à construire le voyage
+CREATE TABLE ITINERAIRE (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_groupe INT NOT NULL UNIQUE,
+    id_hebergement INT DEFAULT NULL,
+    id_transport_aller INT DEFAULT NULL,
+    cout_total DECIMAL(10, 2) DEFAULT 0.00,
+    FOREIGN KEY (id_groupe) REFERENCES GROUPE(id) ON DELETE CASCADE,
+    FOREIGN KEY (id_hebergement) REFERENCES HEBERGEMENT(id) ON DELETE SET NULL,
+    FOREIGN KEY (id_transport_aller) REFERENCES TRANSPORT(id) ON DELETE SET NULL
+);
